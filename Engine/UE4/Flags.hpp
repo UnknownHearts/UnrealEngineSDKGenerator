@@ -58,7 +58,7 @@ enum class UEPropertyFlags : size_t
 
 inline bool operator&(UEPropertyFlags lhs, UEPropertyFlags rhs)
 {
-	return (static_cast<std::underlying_type_t<UEPropertyFlags>>(lhs) & static_cast<std::underlying_type_t<UEPropertyFlags>>(rhs)) != 0;
+	return (static_cast<std::underlying_type_t<UEPropertyFlags>>(lhs) & static_cast<std::underlying_type_t<UEPropertyFlags>>(rhs)) == static_cast<std::underlying_type_t<UEPropertyFlags>>(rhs);
 }
 
 /// <summary>
@@ -66,7 +66,7 @@ inline bool operator&(UEPropertyFlags lhs, UEPropertyFlags rhs)
 /// </summary>
 /// <param name="flags">The flags.</param>
 /// <returns>The string representation of the flags.</returns>
-std::string StringifyFlags(UEPropertyFlags flags);
+std::string StringifyFlags(const UEPropertyFlags flags);
 
 enum class UEFunctionFlags : uint32_t
 {
@@ -102,7 +102,7 @@ enum class UEFunctionFlags : uint32_t
 
 inline bool operator&(UEFunctionFlags lhs, UEFunctionFlags rhs)
 {
-	return (static_cast<std::underlying_type_t<UEFunctionFlags>>(lhs) & static_cast<std::underlying_type_t<UEFunctionFlags>>(rhs)) != 0;
+	return (static_cast<std::underlying_type_t<UEFunctionFlags>>(lhs) & static_cast<std::underlying_type_t<UEFunctionFlags>>(rhs)) == static_cast<std::underlying_type_t<UEFunctionFlags>>(rhs);
 }
 
 /// <summary>
@@ -110,4 +110,4 @@ inline bool operator&(UEFunctionFlags lhs, UEFunctionFlags rhs)
 /// </summary>
 /// <param name="flags">The flags.</param>
 /// <returns>The string representation of the flags.</returns>
-std::string StringifyFlags(UEFunctionFlags flags);
+std::string StringifyFlags(const UEFunctionFlags flags);

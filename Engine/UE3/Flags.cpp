@@ -4,7 +4,7 @@
 #include <sstream>
 #include <iterator>
 
-std::string StringifyFlags(UEPropertyFlags flags)
+std::string StringifyFlags(const UEPropertyFlags flags)
 {
 	std::vector<const char*> buffer;
 
@@ -66,7 +66,7 @@ std::string StringifyFlags(UEPropertyFlags flags)
 	}
 }
 
-std::string StringifyFlags(UEFunctionFlags flags)
+std::string StringifyFlags(const UEFunctionFlags flags)
 {
 	std::vector<const char*> buffer;
 
